@@ -97,28 +97,3 @@ currentLocationBtn.addEventListener("click", showcurrentWeather);
 //#endregion
 
 //#endregion
-
-//#region charts not finished
-const ctx = document.querySelector("#waether-chart").getContext("2d");
-const labels = [
-  "10%",
-  "20%",
-  "30%",
-  "40%",
-  "50%",
-  "60%",
-  "70%",
-  "80%",
-  "90%",
-  "100%",
-];
-const data = {
-  labels,
-  dataSet=[
-    {
-      data
-    }
-  ]
-};
-let waetherData = {};
-//#endregion
