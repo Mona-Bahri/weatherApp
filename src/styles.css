@@ -1,0 +1,168 @@
+body {
+  margin: 0;
+  background: linear-gradient(to top, #09203f 0%, #537895 100%);
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.navbar-custom {
+  margin-top: 10px;
+}
+
+#primary-nav {
+  background-color: #245a7036;
+  height: 60px;
+}
+.searchbar {
+  margin-left: -850px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.search {
+  width: 300px;
+  border-radius: 20px;
+}
+.search:focus {
+  outline: none;
+  box-shadow: none;
+}
+.current {
+  background-color: #3c6a86 !important;
+  color: #dfd3c3;
+  display: block;
+  transition: all 300ms ease-in-out;
+  border: none !important;
+}
+.current:hover {
+  background-color: #1c3756 !important;
+  cursor: pointer;
+  opacity: 0.9;
+}
+.searchlocatin {
+  background-color: #3c6a86 !important;
+  color: #dfd3c3;
+  display: block;
+  border: none !important;
+  transition: all 300ms ease-in-out;
+}
+.searchlocatin:hover {
+  background-color: #1c3756 !important;
+  cursor: pointer;
+  opacity: 0.9;
+}
+.background {
+  height: 300px;
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
+}
+.backgroundCard {
+  border: 1px solid #e4d0b9;
+  border-radius: 40px;
+}
+ul {
+  list-style: none;
+}
+.main {
+  margin-top: 40px;
+  margin-bottom: 30px;
+  width: 700px;
+  height: 250px;
+  border-radius: 10px;
+  background-size: cover;
+  padding: 20px;
+}
+.detailsCard {
+  margin-top: 40px;
+  margin-bottom: 30px;
+  height: 250px;
+  border-radius: 10px;
+  background: linear-gradient(to top, #09203f 0%, #537895 100%);
+}
+.detailsCardbtn {
+  background-color: #3c6a86 !important;
+  color: #dfd3c3;
+  display: block;
+  transition: all 300ms ease-in-out;
+  border: none !important;
+}
+.detailsCardbtn:hover {
+  background-color: #1c3756 !important;
+  cursor: pointer;
+  opacity: 0.9;
+}
+.city {
+  margin-bottom: 0px;
+  font-size: 60px;
+  color: white;
+  font-family: "PT Sans Narrow", sans-serif;
+}
+.currentWeather {
+  margin: left 15px;
+  font-family: "Saira Condensed", sans-serif;
+  color: white;
+  font-size: 30px;
+  margin-top: 0px;
+}
+ul {
+  margin: 0;
+}
+.temperature {
+  color: white;
+  font-size: 55px;
+  text-align: center;
+  font-family: "PT Sans Narrow", sans-serif;
+}
+.currentState {
+  color: white;
+  font-size: 15px;
+  text-align: center;
+  font-family: "Saira Condensed", sans-serif;
+  margin-top: 50px;
+  font-weight: bold;
+}
+
+.nextDaysWeather {
+  background-color: #112a48;
+  font-family: "PT Sans Narrow", sans-serif;
+  border: none;
+  color: white;
+}
+.nextDaysWeather:hover {
+  background-color: #233f5d;
+}
+.celsius {
+  font-size: 15px;
+  color: white;
+}
+.fahrenheit {
+  font-size: 15px;
+  color: white;
+}
+.celsius:hover {
+  background-color: #365aa4;
+  cursor: pointer;
+}
+.fahrenheit:hover {
+  background-color: #365aa4;
+  cursor: pointer;
+}
+.weekday {
+  font-size: 30px;
+  text-align: center;
+  font-family: "PT Sans Narrow", sans-serif;
+}
+.highestTemperature {
+  font-size: 25px;
+}
+.lowestTemperature {
+  font-size: 25px;
+  color: rgba(255, 255, 255, 0.295);
+}
+.daysicon {
+  text-align: center;
+}
+.icon {
+  margin-bottom: 20px;
+}
