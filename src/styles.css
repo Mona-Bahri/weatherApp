@@ -166,3 +166,9 @@ ul {
 .icon {
   margin-bottom: 20px;
 }
+.gitLink {
+  text-align: center;
+  margin-top: 120px;
+  font-size: 15px;
+  color: #e4d0b9;
+}
