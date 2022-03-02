@@ -193,3 +193,6 @@ ul {
   font-size: 20px;
   font-family: "Saira Condensed", sans-serif;
 }
+#btnGroup {
+  margin-bottom: 40px;
+}
