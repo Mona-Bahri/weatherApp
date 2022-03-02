@@ -1,13 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
     <meta charset="UTF-8" />
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"
-      integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -103,7 +98,7 @@
         <div class="col">
           <div class="main" style="background-image: url('media/img3.jpg')">
             <div class="row">
-              <div class="col-6">
+              <div class="col-5">
                 <ul>
                   <div class="city" id="cityName"><li></li></div>
                   <br />
@@ -146,29 +141,12 @@
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div
-            class="card border-light mb-3 detailsCard border-0"
-            style="max-width: 45rem"
-          >
-            <div class="card-header">
-              <div class="btn-group" role="group" aria-label="Basic example">
-                <button type="button" class="btn btn-primary detailsCardbtn">
-                  Precipitation
-                </button>
-                <button type="button" class="btn btn-primary detailsCardbtn">
-                  Humidity
-                </button>
-                <button type="button" class="btn btn-primary detailsCardbtn">
-                  Wind
-                </button>
+              <div class="col-1">
+                <div id="weather-description">
+                  <div id="humidity"></div>
+                  <div id="wind-speed"></div>
+                </div>
               </div>
-            </div>
-            <div id="chart">
-              <canvas id="waether-chart"> <div class="card-body"></div></canvas>
             </div>
           </div>
         </div>
@@ -269,7 +247,7 @@
     </div>
     <div class="gitLink">
       <a href="https://github.com/Mona-Bahri/weatherApp" target="_blank"
-        >open-source code</a
+        >open source code</a
       >
       <span> by Mona Bahri </span>
     </div>

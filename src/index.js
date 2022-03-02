@@ -63,6 +63,12 @@ function searchHandler(response) {
   document.querySelector("#cityName").innerHTML = response.data.name;
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
+  document.querySelector(
+    "#humidity"
+  ).innerHTML = `humidity: ${response.data.main.humidity}%`;
+  document.querySelector("#wind-speed").innerHTML = `Wind: ${Math.round(
+    response.data.wind.speed
+  )} km/h`;
 }
 
 function searchCity(event) {

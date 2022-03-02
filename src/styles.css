@@ -9,7 +9,12 @@ body {
 .navbar-custom {
   margin-top: 10px;
 }
-
+.gitLink {
+  text-align: center;
+  margin-top: 80px;
+  font-size: 15px;
+  color: #e4d0b9;
+}
 #primary-nav {
   background-color: #245a7036;
   height: 60px;
@@ -68,7 +73,7 @@ ul {
   margin-top: 40px;
   margin-bottom: 30px;
   width: 700px;
-  height: 250px;
+  height: 230px;
   border-radius: 10px;
   background-size: cover;
   padding: 20px;
@@ -112,6 +117,8 @@ ul {
   color: white;
   font-size: 55px;
   text-align: center;
+  margin-right: 150px;
+  margin-top: 10px;
   font-family: "PT Sans Narrow", sans-serif;
 }
 .currentState {
@@ -124,6 +131,7 @@ ul {
 }
 
 .nextDaysWeather {
+  height: 180px;
   background-color: #112a48;
   font-family: "PT Sans Narrow", sans-serif;
   border: none;
@@ -166,9 +174,10 @@ ul {
 .icon {
   margin-bottom: 20px;
 }
-.gitLink {
-  text-align: center;
-  margin-top: 120px;
-  font-size: 15px;
-  color: #e4d0b9;
+#weather-description {
+  color: white;
+  margin-left: -100px;
+  margin-top: 85px;
+  font-size: 20px;
+  font-family: "Saira Condensed", sans-serif;
 }
