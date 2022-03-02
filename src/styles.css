@@ -11,7 +11,7 @@ body {
 }
 .gitLink {
   text-align: center;
-  margin-top: 80px;
+  margin-top: 50px;
   font-size: 15px;
   color: #e4d0b9;
 }
@@ -131,7 +131,7 @@ ul {
 }
 
 .nextDaysWeather {
-  height: 180px;
+  height: 220px;
   background-color: #112a48;
   font-family: "PT Sans Narrow", sans-serif;
   border: none;
@@ -157,18 +157,30 @@ ul {
   cursor: pointer;
 }
 .weekday {
-  font-size: 30px;
+  font-size: 20px;
   text-align: center;
-  font-family: "PT Sans Narrow", sans-serif;
+  font-family: "Saira Condensed", sans-serif;
 }
-.highestTemperature {
+#highestTemperature {
   font-size: 25px;
 }
-.lowestTemperature {
+#max-icon {
+  color: #dc2f2fa2;
+}
+#lowestTemperature {
+  margin-left: 37px;
   font-size: 25px;
   color: rgba(255, 255, 255, 0.295);
 }
-.daysicon {
+#min-icon {
+  margin-left: 37px;
+  color: #79c2d0;
+}
+.temperatureMinMax {
+  margin-top: 30px;
+  margin-left: 20px;
+}
+#daysicon {
   text-align: center;
 }
 .icon {

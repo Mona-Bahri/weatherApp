@@ -143,8 +143,10 @@
               </div>
               <div class="col-1">
                 <div id="weather-description">
-                  <div id="humidity"></div>
-                  <div id="wind-speed"></div>
+                  <ul>
+                    <li id="humidity"></li>
+                    <li id="wind-speed"></li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -159,18 +161,51 @@
               <div class="card card border-0" style="width: 25rem">
                 <div class="card-body nextDaysWeather">
                   <p class="weekday">Mon</p>
-                  <ul>
-                    <class class="row">
-                      <class class="col daysicon">
-                        <li>
-                          <img
-                            src="https://img.icons8.com/fluency/50/000000/wind.png"
-                          /></li
-                      ></class>
-                      <class class="col highestTemperature"> <li>5°</li></class>
-                      <class class="col lowestTemperature"> <li>-2°</li></class>
+                  <div class="col" id="daysicon">
+                    <img
+                      src="https://img.icons8.com/external-justicon-flat-justicon/50/000000/external-cloud-weather-justicon-flat-justicon-2.png"
+                    />
+                  </div>
+
+                  <class class="row temperatureMinMax">
+                    <class class="col-6">
+                      <i class="bi bi-caret-up-fill" id="max-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-caret-up-fill"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"
+                          />
+                        </svg>
+                      </i>
+
+                      <div id="highestTemperature">10°</div>
                     </class>
-                  </ul>
+
+                    <class class="col-6">
+                      <i class="bi bi-caret-down-fill" id="min-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-caret-down-fill"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"
+                          />
+                        </svg>
+                      </i>
+
+                      <div id="lowestTemperature">-3°</div>
+                    </class>
+                  </class>
                 </div>
               </div>
             </div>
@@ -178,20 +213,51 @@
               <div class="card card border-0" style="width: 25rem">
                 <div class="card-body nextDaysWeather">
                   <p class="weekday">Tue</p>
-                  <ul>
-                    <class class="row">
-                      <class class="col daysicon">
-                        <li>
-                          <img
-                            src="https://img.icons8.com/external-justicon-flat-justicon/50/000000/external-cloud-weather-justicon-flat-justicon-2.png"
-                          /></li
-                      ></class>
-                      <class class="col highestTemperature">
-                        <li>10°</li></class
-                      >
-                      <class class="col lowestTemperature"> <li>-3°</li></class>
+                  <div class="col" id="daysicon">
+                    <img
+                      src="https://img.icons8.com/external-justicon-flat-justicon/50/000000/external-cloud-weather-justicon-flat-justicon-2.png"
+                    />
+                  </div>
+
+                  <class class="row temperatureMinMax">
+                    <class class="col-6">
+                      <i class="bi bi-caret-up-fill" id="max-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-caret-up-fill"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"
+                          />
+                        </svg>
+                      </i>
+
+                      <div id="highestTemperature">10°</div>
                     </class>
-                  </ul>
+
+                    <class class="col-6">
+                      <i class="bi bi-caret-down-fill" id="min-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-caret-down-fill"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"
+                          />
+                        </svg>
+                      </i>
+
+                      <div id="lowestTemperature">-3°</div></class
+                    >
+                  </class>
                 </div>
               </div>
             </div>
@@ -199,22 +265,51 @@
               <div class="card card border-0" style="width: 25rem">
                 <div class="card-body nextDaysWeather">
                   <p class="weekday">Wed</p>
-                  <ul>
-                    <class class="row">
-                      <class class="col daysicon">
-                        <li>
-                          <img
-                            src="https://img.icons8.com/color/50/000000/snow-storm--v1.png"
-                          /></li
-                      ></class>
-                      <class class="col highestTemperature">
-                        <li>-2°</li></class
-                      >
-                      <class class="col lowestTemperature">
-                        <li>-10°</li></class
-                      >
+                  <div class="col" id="daysicon">
+                    <img
+                      src="https://img.icons8.com/external-justicon-flat-justicon/50/000000/external-cloud-weather-justicon-flat-justicon-2.png"
+                    />
+                  </div>
+
+                  <class class="row temperatureMinMax">
+                    <class class="col-6">
+                      <i class="bi bi-caret-up-fill" id="max-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-caret-up-fill"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"
+                          />
+                        </svg>
+                      </i>
+
+                      <div id="highestTemperature">10°</div>
                     </class>
-                  </ul>
+
+                    <class class="col-6">
+                      <i class="bi bi-caret-down-fill" id="min-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-caret-down-fill"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"
+                          />
+                        </svg>
+                      </i>
+
+                      <div id="lowestTemperature">-3°</div></class
+                    >
+                  </class>
                 </div>
               </div>
             </div>
@@ -222,22 +317,51 @@
               <div class="card card border-0" style="width: 25rem">
                 <div class="card-body nextDaysWeather">
                   <p class="weekday">Thu</p>
-                  <ul>
-                    <class class="row">
-                      <class class="col daysicon">
-                        <li>
-                          <img
-                            src="https://img.icons8.com/external-justicon-flat-justicon/50/000000/external-cloud-weather-justicon-flat-justicon-1.png"
-                          /></li
-                      ></class>
-                      <class class="col highestTemperature">
-                        <li>-5°</li></class
-                      >
-                      <class class="col lowestTemperature">
-                        <li>-10°</li></class
-                      >
+                  <div class="col" id="daysicon">
+                    <img
+                      src="https://img.icons8.com/external-justicon-flat-justicon/50/000000/external-cloud-weather-justicon-flat-justicon-2.png"
+                    />
+                  </div>
+
+                  <class class="row temperatureMinMax">
+                    <class class="col-6">
+                      <i class="bi bi-caret-up-fill" id="max-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-caret-up-fill"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"
+                          />
+                        </svg>
+                      </i>
+
+                      <div id="highestTemperature">10°</div>
                     </class>
-                  </ul>
+
+                    <class class="col-6">
+                      <i class="bi bi-caret-down-fill" id="min-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-caret-down-fill"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"
+                          />
+                        </svg>
+                      </i>
+
+                      <div id="lowestTemperature">-3°</div></class
+                    >
+                  </class>
                 </div>
               </div>
             </div>
