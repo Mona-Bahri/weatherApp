@@ -45,6 +45,10 @@ body {
   cursor: pointer;
   opacity: 0.9;
 }
+.current:focus {
+  outline: none;
+  box-shadow: none;
+}
 .searchlocatin {
   background-color: #3c6a86 !important;
   color: #dfd3c3;
@@ -56,6 +60,10 @@ body {
   background-color: #1c3756 !important;
   cursor: pointer;
   opacity: 0.9;
+}
+.searchlocatin:focus {
+  outline: none;
+  box-shadow: none;
 }
 .background {
   height: 300px;
@@ -210,4 +218,12 @@ ul {
 .activeBtn:hover {
   cursor: default;
   background-color: transparent;
+}
+#celsius:focus {
+  outline: none;
+  box-shadow: none;
+}
+#fahrenheit:focus {
+  outline: none;
+  box-shadow: none;
 }
