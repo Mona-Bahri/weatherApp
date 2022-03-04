@@ -28,21 +28,24 @@ timeZone.innerHTML = DateTime(now);
 
 //#endregion
 
-//#region temperature not usig
+//#region temperature
 function celsiusToFahrenheit(event) {
   event.preventDefault();
-
   let temperature = document.querySelector("#temperature");
-  //temperature.innerHTML = "5°";
+  fahrenheit.classList.remove("activeBtn");
+  celsius.classList.add("activeBtn");
+  temperature.innerHTML = Math.round(celsiusTemperature);
 }
 let celsius = document.querySelector("#celsius");
 celsius.addEventListener("click", celsiusToFahrenheit);
 
 function fahrenheitToCelsius(event) {
   event.preventDefault();
-
+  fahrenheit.classList.add("activeBtn");
+  celsius.classList.remove("activeBtn");
   let temperature = document.querySelector("#temperature");
-  //temperature.innerHTML = "41°";
+  let fahrenheitElement = (celsiusTemperature * 9) / 5 + 32;
+  temperature.innerHTML = Math.round(fahrenheitElement);
 }
 let fahrenheit = document.querySelector("#fahrenheit");
 fahrenheit.addEventListener("click", fahrenheitToCelsius);
@@ -57,9 +60,9 @@ function handelDefultCity(city) {
 }
 
 function searchHandler(response) {
-  document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.main.temp
-  );
+  celsiusTemperature = response.data.main.temp;
+  document.querySelector("#temperature").innerHTML =
+    Math.round(celsiusTemperature);
   document.querySelector("#cityName").innerHTML = response.data.name;
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
@@ -85,6 +88,7 @@ function searchCity(event) {
 let searchCurrentCity = document.querySelector("#searchForm");
 searchCurrentCity.addEventListener("submit", searchCity);
 handelDefultCity("New York");
+let celsiusTemperature = null;
 
 //#region  current Loaction
 
