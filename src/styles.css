@@ -70,6 +70,7 @@ ul {
   list-style: none;
 }
 .main {
+  margin-left: 16px;
   margin-top: 40px;
   margin-bottom: 30px;
   width: 700px;
@@ -184,15 +185,22 @@ ul {
   text-align: center;
 }
 .icon {
-  margin-bottom: 20px;
+  position: relative;
+  right: 80px;
+  top: 30px;
 }
 #weather-description {
   color: white;
-  margin-left: -100px;
-  margin-top: 85px;
+  margin-left: -152px;
+  margin-top: 69px;
   font-size: 20px;
   font-family: "Saira Condensed", sans-serif;
 }
 #btnGroup {
   margin-bottom: 40px;
+}
+.temperatureElement {
+  position: relative;
+  top: -56px;
+  right: -32px;
 }
