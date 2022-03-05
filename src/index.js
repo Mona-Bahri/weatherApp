@@ -32,6 +32,7 @@ timeZone.innerHTML = DateTime(now);
 function celsiusToFahrenheit(event) {
   event.preventDefault();
   let temperature = document.querySelector("#temperature");
+  celsius.classList.add("activeBtn");
   fahrenheit.classList.remove("activeBtn");
   temperature.innerHTML = Math.round(celsiusTemperature);
 }
