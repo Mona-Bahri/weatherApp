@@ -65,7 +65,7 @@ function searchHandler(response) {
     Math.round(celsiusTemperature);
   document.querySelector("#cityName").innerHTML = response.data.name;
   document.querySelector("#description").innerHTML =
-    response.data.weather[0].main;
+    response.data.weather[0].description;
   document.querySelector(
     "#humidity"
   ).innerHTML = `humidity: ${response.data.main.humidity}%`;
