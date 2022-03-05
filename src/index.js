@@ -33,7 +33,6 @@ function celsiusToFahrenheit(event) {
   event.preventDefault();
   let temperature = document.querySelector("#temperature");
   fahrenheit.classList.remove("activeBtn");
-  celsius.classList.add("activeBtn");
   temperature.innerHTML = Math.round(celsiusTemperature);
 }
 let celsius = document.querySelector("#celsius");
