@@ -112,3 +112,74 @@ currentLocationBtn.addEventListener("click", showcurrentWeather);
 //#endregion
 
 //#endregion
+
+//#region weather forecast
+function ForcastDisplay() {
+  let DaysForcast = document.querySelector("#weatherforcast-days");
+  let Forcasthtml = `<div class="row row-cols-1 row-cols-md-3 g-4">`;
+  let days = ["1", "2", "3", "4"];
+  days.forEach(function (day) {
+    Forcasthtml =
+      Forcasthtml +
+      `
+      <div
+            class="card card border-0 Forcast-Card-Style Forcast-Card-Style px-0 "
+            style="width: 25rem"
+           
+          >
+       <div class="card-body nextDaysWeather ">
+                  <p class="weekday">${day}</p>
+                  <div class="col" id="daysicon">
+                    <img
+                      src="https://img.icons8.com/external-justicon-flat-justicon/50/000000/external-cloud-weather-justicon-flat-justicon-2.png"
+                    />
+                  </div>
+
+                  <class class="row temperatureMinMax">
+                    <class class="col-6">
+                      <i class="bi bi-caret-up-fill" id="max-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-caret-up-fill"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"
+                          />
+                        </svg>
+                      </i>
+
+                      <div id="highestTemperature">10°</div>
+                    </class>
+
+                    <class class="col-6">
+                      <i class="bi bi-caret-down-fill" id="min-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-caret-down-fill"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"
+                          />
+                        </svg>
+                      </i>
+
+                      <div id="lowestTemperature">-3°</div>
+                    </class>
+                  </class>
+                </div>
+                </div>
+     `;
+  });
+  Forcasthtml = Forcasthtml + `</div>`;
+  DaysForcast.innerHTML = Forcasthtml;
+}
+ForcastDisplay();
+//#endregion
