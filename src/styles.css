@@ -169,7 +169,7 @@ ul {
   cursor: pointer;
 }
 .weekday {
-  font-size: 20px;
+  font-size: 25px;
   text-align: center;
   font-family: "Saira Condensed", sans-serif;
 }
@@ -189,7 +189,7 @@ ul {
   color: #79c2d0;
 }
 .temperatureMinMax {
-  margin-top: 30px;
+  margin-top: 15px;
   margin-left: 20px;
 }
 #daysicon {

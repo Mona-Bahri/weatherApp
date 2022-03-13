@@ -26,6 +26,12 @@ let timeZone = document.querySelector("#timeZone");
 let now = new Date();
 timeZone.innerHTML = DateTime(now);
 
+function displaydate(timeStamp) {
+  let date = new Date(timeStamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", " Fri", "Sat"];
+  return days[day];
+}
 //#endregion
 
 //#region temperature
@@ -59,6 +65,13 @@ function handelDefultCity(city) {
   axios.get(apiUrl).then(searchHandler);
 }
 
+function getDailyForcast(coordinates) {
+  let units = "metric";
+  let apiKey = "2d0271702a5c12ccb610ae9f48878fd2";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(DisplayDailyforcast);
+}
+
 function searchHandler(response) {
   celsiusTemperature = response.data.main.temp;
   document.querySelector("#temperature").innerHTML =
@@ -77,6 +90,8 @@ function searchHandler(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+
+  getDailyForcast(response.data.coord);
 }
 
 function searchCity(event) {
@@ -93,8 +108,8 @@ let celsiusTemperature = null;
 //#region  current Loaction
 
 function showPosition(position) {
-  let latitude = position.coords.latitude;
-  let longitude = position.coords.longitude;
+  let latitude = position.coords.lat;
+  let longitude = position.coords.lon;
   let units = "metric";
   let apiKey = "2d0271702a5c12ccb610ae9f48878fd2";
   let appUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
@@ -114,24 +129,29 @@ currentLocationBtn.addEventListener("click", showcurrentWeather);
 //#endregion
 
 //#region weather forecast
-function ForcastDisplay() {
+function DisplayDailyforcast(response) {
+  let Displayforcast = response.data.daily;
   let DaysForcast = document.querySelector("#weatherforcast-days");
   let Forcasthtml = `<div class="row row-cols-1 row-cols-md-3 g-4">`;
-  let days = ["1", "2", "3", "4"];
-  days.forEach(function (day) {
-    Forcasthtml =
-      Forcasthtml +
-      `
+
+  Displayforcast.forEach(function (forcastDay, index) {
+    if (index >= 4) {
+      Forcasthtml =
+        Forcasthtml +
+        `
       <div
             class="card card border-0 Forcast-Card-Style Forcast-Card-Style px-0 "
             style="width: 25rem"
            
           >
        <div class="card-body nextDaysWeather ">
-                  <p class="weekday">${day}</p>
+                  <p class="weekday">${displaydate(forcastDay.dt)}</p>
                   <div class="col" id="daysicon">
                     <img
-                      src="https://img.icons8.com/external-justicon-flat-justicon/50/000000/external-cloud-weather-justicon-flat-justicon-2.png"
+                      src="http://openweathermap.org/img/wn/${
+                        forcastDay.weather[0].icon
+                      }@2x.png"
+                       width="90"
                     />
                   </div>
 
@@ -152,7 +172,9 @@ function ForcastDisplay() {
                         </svg>
                       </i>
 
-                      <div id="highestTemperature">10°</div>
+                      <div id="highestTemperature">${Math.round(
+                        forcastDay.temp.max
+                      )}°</div>
                     </class>
 
                     <class class="col-6">
@@ -171,15 +193,17 @@ function ForcastDisplay() {
                         </svg>
                       </i>
 
-                      <div id="lowestTemperature">-3°</div>
+                      <div id="lowestTemperature">${Math.round(
+                        forcastDay.temp.min
+                      )}°</div>
                     </class>
                   </class>
                 </div>
                 </div>
      `;
+    }
   });
   Forcasthtml = Forcasthtml + `</div>`;
   DaysForcast.innerHTML = Forcasthtml;
 }
-ForcastDisplay();
 //#endregion
