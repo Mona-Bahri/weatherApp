@@ -34,29 +34,6 @@ function displaydate(timeStamp) {
 }
 //#endregion
 
-//#region temperature
-function celsiusToFahrenheit(event) {
-  event.preventDefault();
-  let temperature = document.querySelector("#temperature");
-  celsius.classList.add("activeBtn");
-  fahrenheit.classList.remove("activeBtn");
-  temperature.innerHTML = Math.round(celsiusTemperature);
-}
-let celsius = document.querySelector("#celsius");
-celsius.addEventListener("click", celsiusToFahrenheit);
-
-function fahrenheitToCelsius(event) {
-  event.preventDefault();
-  fahrenheit.classList.add("activeBtn");
-  celsius.classList.remove("activeBtn");
-  let temperature = document.querySelector("#temperature");
-  let fahrenheitElement = (celsiusTemperature * 9) / 5 + 32;
-  temperature.innerHTML = Math.round(fahrenheitElement);
-}
-let fahrenheit = document.querySelector("#fahrenheit");
-fahrenheit.addEventListener("click", fahrenheitToCelsius);
-//#endregion
-
 //#region search for city temp
 function handelDefultCity(city) {
   let units = "metric";
@@ -103,7 +80,6 @@ function searchCity(event) {
 let searchCurrentCity = document.querySelector("#searchForm");
 searchCurrentCity.addEventListener("submit", searchCity);
 handelDefultCity("New York");
-let celsiusTemperature = null;
 
 //#region  current Loaction
 
