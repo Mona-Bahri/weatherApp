@@ -26,11 +26,12 @@ let timeZone = document.querySelector("#timeZone");
 let now = new Date();
 timeZone.innerHTML = DateTime(now);
 
-function displaydate(timeStamp) {
-  let current = new Date(timeStamp * 1000);
-  let weekDay = current.getDay();
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", " Fri", "Sat"];
+function displaydate(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let weekDay = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   return days[weekDay];
+  console.log(days[weekDay]);
 }
 //#endregion
 
@@ -109,9 +110,8 @@ function DisplayDailyforcast(response) {
   let Displayforcast = response.data.daily;
   let DaysForcast = document.querySelector("#weatherforcast-days");
   let Forcasthtml = `<div class="row row-cols-1 row-cols-md-3 g-4">`;
-
   Displayforcast.forEach(function (forcastDay, index) {
-    if (index <= 4) {
+    if (index < 4) {
       Forcasthtml =
         Forcasthtml +
         `
