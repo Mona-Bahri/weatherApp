@@ -84,11 +84,11 @@ handelDefultCity("New York");
 //#region  current Loaction
 
 function showPosition(position) {
-  let latitude = position.coords.lat;
-  let longitude = position.coords.lon;
-  let units = "metric";
   let apiKey = "2d0271702a5c12ccb610ae9f48878fd2";
-  let appUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
+  let lat = position.coords.latitude;
+  let lon = position.coords.longitude;
+  let units = "metric";
+  let appUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
   axios.get(appUrl).then(searchHandler);
 }
 
